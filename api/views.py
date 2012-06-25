@@ -21,16 +21,24 @@ def index(request):
 		ns = {'name':    db_ns.name,
 			  'version': db_ns.version,
 			  'classes': False,
+			  'methods': False,
 			  }
 		namespaces.append (ns)
 
 		classes = models.Class.objects.filter (namespace = db_ns)
 		for db_class in classes:
 			klass = {'name': db_class.gtype_name}
-
 			if not ns['classes']:
 				ns['classes'] = []
-			ns['classes'].append (klass)
+			ns['classes'].append(klass)
+
+		methods = models.Function.objects.filter(namespace = db_ns)
+		for db_methods in methods:
+			kethods = {'methods':db_methods.name}
+			if not ns['methods']:
+				ns['methods'] = []
+			ns['methods'].append(kethods)
+
 
 	ctx = Context({'namespaces': namespaces})
 	return render_to_response ('overview.html', ctx)

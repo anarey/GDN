@@ -13,6 +13,14 @@
         <li>{{ class.name }}</li>
       {% endfor %}
     </ul>
+  {% endif%}
+  {% if ns.methods %}
+    <h2>Methods: </h2>
+    <ul>
+      {% for method in ns.methods %}
+        <li>{{ method.methods }}</li>
+        {% endfor%}
+    </ul>
   {% endif %}
 {% endfor %}
 
