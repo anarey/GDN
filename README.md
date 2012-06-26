@@ -3,12 +3,13 @@ GDN: Generic Developers Network web application
 
 Requirements
 ------------
-* ```Django 1.3```
-* ```gobject-introspection```
-* ```libgirepository1.0-dev```
-* ```libgtk-3-dev```
+* `Django 1.3`
+* `gobject-introspection`
+* `libgirepository1.0-dev`
+* `libgtk-3-dev`
 
-```apt-get install gobject-introspection libgirepository1.0-dev libgtk-3-dev```
+In Ubuntu:
+`apt-get install gobject-introspection libgirepository1.0-dev libgtk-3-dev`
 
 How to Install:
 ---------------
@@ -16,13 +17,13 @@ How to Install:
 * Clone to repo:
 `git clone https://github.com/aruiz/GDN.git`
 
-* Sync the database. By defaults, the database is set in `/mnt/development.sqlite`
+* Config the database. By defaults, the database is set in `/mnt/development.sqlite`
 
-** `$sudo mkfs.ext2 /dev/ram0 20480`
-** `$sudo mount /dev/ram0 /mnt/`
-** `$sudo chown user:user /mnt/`
+ * `$sudo mkfs.ext2 /dev/ram0 20480`
+ * `$sudo mount /dev/ram0 /mnt/`
+ * `$sudo chown user:user /mnt/`
 
-* It necesary run the commnand, to created the database
+* It necesary run the commnand to created the database:
 `$python manager.py syncdb`
 
 * Running the app.
@@ -60,3 +61,4 @@ templates/
   base.html
   overview.html
 urls.py
+```
