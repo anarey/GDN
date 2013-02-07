@@ -30,7 +30,7 @@ How to Install:
 python manager.py runserver
 
 * Generar la informacion en la base de datos.
-http://localhost:8000/parsegir
+python manage.py parsegir
 
 
 URL: Where is the app? 
@@ -38,7 +38,6 @@ URL: Where is the app?
  
 * http://localhost:8000/api
 * http://localhost:8000/admin
-* http://localhost:8000/parsegir
 
 
 project structure
