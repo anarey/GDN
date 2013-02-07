@@ -27,10 +27,10 @@ How to Install:
 `$python manager.py syncdb`
 
 * Running the app.
-python manager.py runserver
+`python manager.py runserver`
 
 * Generar la informacion en la base de datos.
-python manage.py parsegir
+`$python manage.py parsegir`
 
 
 URL: Where is the app? 
